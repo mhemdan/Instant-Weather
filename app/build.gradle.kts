@@ -14,7 +14,6 @@ plugins {
 
 android {
     compileSdk = Config.compileSdkVersion
-    buildToolsVersion = Config.buildTools
     if (project.hasProperty("keystore.properties")) {
         val keystorePropertiesFile = rootProject.file("keystore.properties")
         val keystoreProperties = Properties()
@@ -111,11 +110,11 @@ android {
         targetCompatibility(Config.javaVersion)
     }
 
-    tasks.withType().all {
-        kotlinOptions {
-            jvmTarget = Config.javaVersion.toString()
-        }
-    }
+//    tasks.withType().all {
+//        kotlinOptions {
+//            jvmTarget = Config.javaVersion.toString()
+//        }
+//    }
 
     packagingOptions {
         resources.excludes.add("**/attach_hotspot_windows.dll")
@@ -123,6 +122,7 @@ android {
         resources.excludes.add("META-INF/AL2.0")
         resources.excludes.add("META-INF/LGPL2.1")
     }
+    namespace = "com.mayokunadeniyi.instantweather"
 }
 
 dependencies {
@@ -191,10 +191,6 @@ dependencies {
 
     // OKHttp Logging Interceptor
     implementation(Network.okhttpInterceptor)
-
-    // Chuck
-    debugImplementation(Network.chuck)
-    releaseImplementation(Network.chuckNoOp)
 
     // Firebase BoM, Crashlytics, Analytics
     implementation(platform(Firebase.firebaseBom))

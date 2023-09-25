@@ -5,12 +5,12 @@ import org.gradle.api.JavaVersion
  */
 
 object Config {
-    const val minSdkVersion = 21
-    const val compileSdkVersion = 30
-    const val targetSdkVersion = 30
+    const val minSdkVersion = 33
+    const val compileSdkVersion = 33
+    const val targetSdkVersion = 33
     const val versionName = "1.0"
     const val versionCode = 5
-    val javaVersion = JavaVersion.VERSION_11
+    val javaVersion = JavaVersion.VERSION_17
     const val buildTools = "30.0.3"
     const val isMultiDexEnabled = true
     const val applicationId = "com.mayokunadeniyi.instantweather"
@@ -25,7 +25,7 @@ interface Libraries {
 
 object Plugins {
     object Version {
-        const val gradleAndroidVersion = "7.0.2"
+        const val gradleAndroidVersion = "8.1.0"
         const val googleServices = "4.3.5"
     }
 
@@ -43,7 +43,7 @@ object Plugins {
 object Kotlin {
 
     object Versions {
-        const val kotlin = "1.4.21"
+        const val kotlin = "1.8.0"
         const val coroutines = "1.4.2"
     }
 
@@ -64,12 +64,12 @@ object AndroidX : Libraries {
         const val lifeCycle = "2.3.0-alpha03"
         const val preferences = "1.1.1"
         const val legacy = "1.0.0"
-        const val work = "2.5.0"
+        const val work = "2.7.1"
         const val paging = "2.1.2"
-        const val fragment = "1.3.0-alpha06"
+        const val fragment = "1.6.1"
 
         const val archCoreTesting = "2.1.0"
-        const val coreKtxTest = "1.3.0"
+        const val coreKtxTest = "1.4.0"
         const val testExt = "1.1.2"
         const val testRules = "1.3.0"
     }
@@ -102,7 +102,7 @@ object AndroidX : Libraries {
 object Dagger : Libraries {
 
     private object Versions {
-        const val hilt = "2.40.1"
+        const val hilt = "2.44"
     }
 
     const val daggerHilt = "com.google.dagger:hilt-android:${Versions.hilt}"
@@ -117,14 +117,11 @@ object Network : Libraries {
     private object Versions {
         const val retrofit = "2.9.0"
         const val okhttp = "4.9.0"
-        const val chuck = "1.1.0"
         const val gson = "2.8.6"
     }
 
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
-    const val chuck = "com.readystatesoftware.chuck:library:${Versions.chuck}"
-    const val chuckNoOp = "com.readystatesoftware.chuck:library-no-op:${Versions.chuck}"
     const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
     const val okhttpInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
     const val gson = "com.google.code.gson:gson:${Versions.gson}"
@@ -138,7 +135,7 @@ object Network : Libraries {
 object Database : Libraries {
 
     object Versions {
-        const val room = "2.2.6"
+        const val room = "2.5.2"
     }
 
     const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
@@ -153,7 +150,7 @@ object Database : Libraries {
 object Navigation : Libraries {
 
     object Versions {
-        const val navigation = "2.3.3"
+        const val navigation = "2.5.0"
     }
 
     const val navigationFragment =

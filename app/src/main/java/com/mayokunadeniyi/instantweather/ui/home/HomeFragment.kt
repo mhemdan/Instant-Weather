@@ -43,7 +43,7 @@ class HomeFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        GpsUtil(requireContext()).turnGPSOn(object : GpsUtil.OnGpsListener {
+        GpsUtil(requireActivity()).turnGPSOn(object : GpsUtil.OnGpsListener {
             override fun gpsStatus(isGPSEnabled: Boolean) {
                 this@HomeFragment.isGPSEnabled = isGPSEnabled
             }

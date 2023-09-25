@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.mayokunadeniyi.instantweather.R
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavigation() {
-        val navController = findNavController(R.id.mainNavFragment)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainNavFragment) as NavHostFragment
+        val navController = navHostFragment.navController
         setupActionBarWithNavController(navController)
         binding.bottomNavBar.setupWithNavController(navController)
     }

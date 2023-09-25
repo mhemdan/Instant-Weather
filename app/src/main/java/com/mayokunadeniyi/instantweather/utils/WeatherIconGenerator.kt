@@ -2,7 +2,7 @@ package com.mayokunadeniyi.instantweather.utils
 
 import android.content.Context
 import com.github.pwittchen.weathericonview.WeatherIconView
-import com.mayokunadeniyi.instantweather.R
+import com.github.pwittchen.weathericonview.library.R
 
 /**
  * Created by Mayokun Adeniyi on 27/02/2020.
