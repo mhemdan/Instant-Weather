@@ -1,0 +1,11 @@
+{
+  "extends": ["config:base"],
+  "baseBranches": ["main"],
+  "autodiscover": true,
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch"],
+      "automerge": false
+    }
+  ]
+}
